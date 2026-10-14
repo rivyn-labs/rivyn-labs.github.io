@@ -26,7 +26,7 @@ Rivyn turns multi-gigabyte raw log floods into resolved incidents in seconds:
 1. **Interactive ROI & Cloud Cost Calculator**: Real-time modeling of monthly cloud storage savings and SRE triage hours reclaimed.
 2. **Interactive 4-Tab Product Tour**: Live simulations of the Incident Board, Grounded AI Copilot, Temporal Anomaly Timeline, and Vectorized Parquet Explorer.
 3. **LogHub Production Benchmarks**: Validated across 2.7M+ lines over 7 heterogeneous datasets (Linux, OpenStack, ZooKeeper, Hadoop, Spark, BGL, HDFS).
-4. **Commercial Pricing & Security Specs**: Complete Community, Pro, and Air-Gapped Enterprise plans.
+4. **Architecture Deep-Dive**: 5-stage pipeline breakdown from regex Drain3 tree parsing to topological correlation.
 
 ---
 
