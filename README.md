@@ -1,9 +1,9 @@
 # Rivyn Official Website
 
 [![Live Website](https://img.shields.io/badge/Website-rivyn--labs.github.io-00f2fe.svg?style=flat-square)](https://rivyn-labs.github.io/)
-[![1st Place Winner](https://img.shields.io/badge/MHP_Hackathon-1st_Place_Winner_🏆-gold.svg?style=flat-square)](https://github.com/rivyn-labs/rivyn)
-[![START Stuttgart](https://img.shields.io/badge/START_Stuttgart-AI_Hackathon-blueviolet.svg?style=flat-square)](https://github.com/rivyn-labs/rivyn)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+[![1st Place Winner](https://img.shields.io/badge/MHP_Hackathon-1st_Place_Winner_🏆-gold.svg?style=flat-square)](https://rivyn-labs.github.io/)
+[![START Stuttgart](https://img.shields.io/badge/START_Stuttgart-AI_Hackathon-blueviolet.svg?style=flat-square)](https://rivyn-labs.github.io/)
+[![License](https://img.shields.io/badge/License-All_rights_reserved-lightgrey.svg?style=flat-square)](LICENSE)
 
 Official website and product showcase for **Rivyn SI**: AI-Powered Observability, Continuous Verification & High-Throughput Log Intelligence.
 
