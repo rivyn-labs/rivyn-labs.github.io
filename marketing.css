@@ -1,11 +1,12 @@
 /* ============================================================
    Rivyn — Enterprise Marketing & Product UI Design System
    Theming: Dark (default) & Light via [data-theme="light"]
-   Typography: Amiri (serif), DM Sans (display), JetBrains Mono
+   Brand: Rivyn gold (#F8E7AB / #D4AF37 / #A37A24) on near-black (#0B0B0C)
+   Typography: Montserrat (brand + headings), DM Sans (body), JetBrains Mono
    ============================================================ */
 
 :root {
-  --bg-primary: #0e0d0b;
+  --bg-primary: #0b0b0c;
   --bg-secondary: #161411;
   --bg-card: #1c1915;
   --bg-card-hover: #24201a;
@@ -15,16 +16,18 @@
   
   --border-color: #2e2922;
   --border-strong: #463e33;
-  --border-accent: rgba(45, 212, 191, 0.3);
+  --border-accent: rgba(212, 175, 55, 0.35);
 
   --text-primary: #f6f3ee;
   --text-secondary: #b3a89b;
   --text-muted: #887d70;
 
-  --accent-cyan: #2dd4bf;
-  --accent-cyan-glow: rgba(45, 212, 191, 0.22);
-  --accent-blue: #60a5fa;
-  --accent-blue-glow: rgba(96, 165, 250, 0.22);
+  --accent-cyan: #d4af37;          /* brand gold (kept name for compatibility) */
+  --accent-cyan-glow: rgba(212, 175, 55, 0.22);
+  --accent-blue: #f8e7ab;          /* light gold: gradient partner */
+  --accent-blue-glow: rgba(248, 231, 171, 0.18);
+  --on-accent: #0b0b0c;            /* text on gold buttons */
+  --brand-gold-gradient: linear-gradient(135deg, #f8e7ab 0%, #e9c96f 35%, #d4af37 65%, #a37a24 100%);
   --accent-crimson: #f87171;
   --accent-crimson-glow: rgba(248, 113, 113, 0.22);
   --accent-amber: #fbbf24;
@@ -32,8 +35,8 @@
   --accent-mint: #34d399;
   --accent-purple: #c084fc;
 
-  --font-brand: "Amiri", "Iowan Old Style", Georgia, serif;
-  --font-display: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-brand: "Montserrat", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Montserrat", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
 
@@ -59,16 +62,18 @@
 
   --border-color: #e2dace;
   --border-strong: #cec3b3;
-  --border-accent: rgba(15, 118, 110, 0.25);
+  --border-accent: rgba(163, 122, 36, 0.35);
 
   --text-primary: #1a1714;
   --text-secondary: #585046;
   --text-muted: #796e62;
 
-  --accent-cyan: #0f766e;
-  --accent-cyan-glow: rgba(15, 118, 110, 0.15);
-  --accent-blue: #1d4ed8;
-  --accent-blue-glow: rgba(29, 78, 216, 0.15);
+  --accent-cyan: #8a6418;          /* dark gold: readable on light backgrounds */
+  --accent-cyan-glow: rgba(163, 122, 36, 0.15);
+  --accent-blue: #a37a24;
+  --accent-blue-glow: rgba(163, 122, 36, 0.12);
+  --on-accent: #ffffff;
+  --brand-gold-gradient: linear-gradient(135deg, #b8902c 0%, #a37a24 50%, #7a5a14 100%);
   --accent-crimson: #c2261f;
   --accent-crimson-glow: rgba(194, 38, 31, 0.15);
   --accent-amber: #b45309;
@@ -79,7 +84,7 @@
   --shadow-sm: 0 2px 4px rgba(26, 23, 20, 0.05);
   --shadow-md: 0 4px 16px rgba(26, 23, 20, 0.08);
   --shadow-lg: 0 16px 40px rgba(26, 23, 20, 0.12);
-  --shadow-glow: 0 0 32px rgba(15, 118, 110, 0.12);
+  --shadow-glow: 0 0 32px rgba(163, 122, 36, 0.12);
 }
 
 /* Base resets */
@@ -195,12 +200,24 @@ body {
   color: var(--text-primary);
 }
 
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 22%;
+  display: block;
+  flex-shrink: 0;
+}
+
 .brand-logo {
   font-family: var(--font-brand);
-  font-size: 1.85rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  color: var(--accent-cyan);
+  background: var(--brand-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -222,7 +239,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
   list-style: none;
 }
 
@@ -231,6 +248,7 @@ body {
   font-size: 0.92rem;
   font-weight: 500;
   color: var(--text-secondary);
+  white-space: nowrap;
   transition: color 0.15s ease;
 }
 
@@ -264,7 +282,7 @@ body {
 
 .btn-primary {
   background: var(--accent-cyan);
-  color: #0c1816;
+  color: var(--on-accent);
   box-shadow: 0 0 20px var(--accent-cyan-glow);
 }
 
@@ -287,8 +305,8 @@ body {
 }
 
 .btn-accent {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-  color: #ffffff;
+  background: var(--brand-gold-gradient);
+  color: var(--on-accent);
   box-shadow: 0 4px 18px var(--accent-cyan-glow);
 }
 
@@ -382,9 +400,9 @@ body {
 
 .hero-title {
   font-family: var(--font-brand);
-  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-size: clamp(2.3rem, 4.6vw, 3.7rem);
   line-height: 1.12;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   color: var(--text-primary);
   max-width: 960px;
   margin: 0 auto 24px;
@@ -392,7 +410,7 @@ body {
 
 .hero-title em {
   font-style: italic;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  background: var(--brand-gold-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
