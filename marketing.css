@@ -7,15 +7,15 @@
 
 :root {
   --bg-primary: #0b0b0c;
-  --bg-secondary: #161411;
-  --bg-card: #1c1915;
-  --bg-card-hover: #24201a;
-  --bg-inset: #14120e;
-  --bg-glass: rgba(28, 25, 21, 0.75);
-  --bg-glass-card: rgba(28, 25, 21, 0.85);
+  --bg-secondary: #111113;
+  --bg-card: #161618;
+  --bg-card-hover: #1d1d20;
+  --bg-inset: #0f0f11;
+  --bg-glass: rgba(22, 22, 24, 0.78);
+  --bg-glass-card: rgba(22, 22, 24, 0.88);
   
-  --border-color: #2e2922;
-  --border-strong: #463e33;
+  --border-color: #26262a;
+  --border-strong: #3a3a40;
   --border-accent: rgba(212, 175, 55, 0.35);
 
   --text-primary: #f6f3ee;
@@ -147,7 +147,7 @@ body {
   height: 600px;
   bottom: 10%;
   left: -150px;
-  background: radial-gradient(circle, var(--accent-crimson) 0%, transparent 70%);
+  background: radial-gradient(circle, #a37a24 0%, transparent 70%);
   opacity: 0.18;
 }
 
@@ -485,6 +485,7 @@ body {
 .metric-val.crimson { color: var(--accent-crimson); }
 .metric-val.blue { color: var(--accent-blue); }
 .metric-val.amber { color: var(--accent-amber); }
+.metric-val.white { color: var(--text-primary); }
 
 .metric-label {
   font-size: 0.92rem;
