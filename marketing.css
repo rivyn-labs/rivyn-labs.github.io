@@ -1603,4 +1603,34 @@ footer {
   .sub-savings-grid {
     grid-template-columns: 1fr;
   }
+  /* Phone header: keep logo, theme toggle and one call to action */
+  .nav-inner { gap: 8px; }
+  .brand-badge { display: none; }
+  .nav-actions { gap: 8px; }
+  .nav-actions .btn-primary { display: none; }
+  .pill-announcement {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    font-size: 0.78rem;
+  }
+  .hero-cta-group .btn { width: 100%; }
+  .calc-card {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 22px;
+    gap: 28px;
+  }
+  .tour-info .btn { white-space: normal; text-align: center; }
+  .footer-links { flex-wrap: wrap; gap: 10px 18px; }
+}
+
+/* Let grid/flex children shrink so wide tables and tab rows scroll inside
+   their own boxes instead of widening the page on small screens. */
+.calc-card > *, .tour-split > *, .comparison-grid > *, .hero-metrics > * {
+  min-width: 0;
+}
+
+/* Decorative background glows must never cause sideways scrolling. */
+html, body {
+  overflow-x: clip;
 }
